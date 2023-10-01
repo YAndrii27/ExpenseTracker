@@ -1,0 +1,11 @@
+{% extends "../base.html" %}
+
+{% block content %}
+  <h2>{% if edit %}Edit Book{% else %}Add New Book{% endif %}</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% if edit %}Update{% else %}Add{% endif %} Book</button>
+  </form>
+  <a href="{% url 'list_books' %}">Back to List</a>
+{% endblock %}
