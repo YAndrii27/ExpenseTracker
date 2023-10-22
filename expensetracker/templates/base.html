@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Book CRUD</title>
+    <title>Books managing</title>
+    {% load static %}
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="{% url 'list_books' %}">Home</a></li>
-        </ul>
+        <a href="{% url 'list_books' %}">Books panel</a>
+        <a href="{% url 'read_categories' %}">Categories panel</a>
+        <a href="{% url 'selection' %}">Expenses</a>
     </nav>
     <div class="content">
         {% block content %}{% endblock %}

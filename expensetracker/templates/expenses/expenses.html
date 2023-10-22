@@ -1,0 +1,39 @@
+{% extends "../base.html" %}
+  <head>
+    {% load static %}
+  </head>
+{% block content %}
+  <h2>Expenses by category:</h2>
+  {% if chart_path %}
+  <div id="chart">
+    <img src="{% static '/expenses/images/' %}{{ chart_path }}" />
+  </div>
+  {% elif table_data %}
+  <style>
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      width: 200 px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+  <div id="table">
+    {% for category, expenses in table_data.items %}
+    <table>
+      <tr>
+        <td>{{ category }}</td>
+        <td>${{ expenses }}</td>
+      </tr>
+    </table>
+    {% endfor %}
+  </div>
+  {% endif %}
+{% endblock %}

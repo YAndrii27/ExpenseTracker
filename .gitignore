@@ -1,3 +1,4 @@
 **.lock
 **.sqlite3
+chart_**.png
 __pycache__
