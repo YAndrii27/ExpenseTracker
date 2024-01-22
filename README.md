@@ -1,6 +1,6 @@
 # Expense tracker  
   
-It's a realization of the [project](https://www.coursera.org/learn/showcase-build-expense-tracker-app-django/home/welcome) from the Coursera.  
+It's an implementation of the [project](https://www.coursera.org/learn/showcase-build-expense-tracker-app-django/home/welcome) from the Coursera.  
 It has **only** basic front-end.
 
 ## Project goals  
